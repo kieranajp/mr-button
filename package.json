@@ -6,6 +6,7 @@
   "scripts": {
     "compile": "rimraf build && babel app/ --out-dir build/",
     "compile:watch": "nodemon --exec 'npm run compile' --ignore build",
+    "production": "npm run compile; cp -r .env node_modules build/; cd build; zip -r ../build.zip .; cd -; npm run compile",
     "postinstall": "npm run compile",
     "start": "node build/index.js"
   },

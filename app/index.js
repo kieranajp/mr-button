@@ -18,5 +18,3 @@ export const handler = (event, context, callback) => {
             return;
     }
 };
-
-handler({ clickType: 'LONG' });
