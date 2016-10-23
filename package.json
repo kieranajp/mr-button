@@ -1,0 +1,21 @@
+{
+  "name": "button",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "compile": "rimraf build && babel app/ --out-dir build/",
+    "compile:watch": "nodemon --exec 'npm run compile' --ignore build",
+    "postinstall": "npm run compile",
+    "start": "node build/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^2.0.0",
+    "node-foursquare": "^0.3.0",
+    "rimraf": "^2.5.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-preset-es2015": "^6.16.0"
+  }
+}
